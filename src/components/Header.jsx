@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom"
 
+
+
+{/*alt para escribir en varias lineas a la vez */}
 const Header = () => {
   return (
     <header>
@@ -10,6 +13,7 @@ const Header = () => {
           <li><Link to="/Dashboard">Dashboard</Link></li>
           <li><Link to="/Login">Login</Link></li>
           <li><Link to="/Register">Register</Link></li>
+          <button>Cerrar Sesión</button>
           
         </u>
       </nav>
