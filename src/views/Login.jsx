@@ -10,13 +10,13 @@ const Login = () => {
         <form>
           <div>
             <label>Correo Electronico:</label>
-            <input type="text" placeholder="Ingrese el nombre del producto" />
+            <input type="text" placeholder="Ingrese su correo electronico" />
           </div>
 
 
           <div>
             <label>Contraseña:</label>
-            <input type="password" placeholder="Ingrese el nombre del producto" />
+            <input type="password" placeholder="Ingrese su contraseña" />
           </div>
         </form>
 
