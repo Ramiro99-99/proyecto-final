@@ -14,7 +14,7 @@ const RouterApp=()=>{
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/NotFound" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
     </Routes>
     </BrowserRouter>
   )
