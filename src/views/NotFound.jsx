@@ -3,7 +3,11 @@ import { Layout } from "../components/Layout"
 const NotFound = () => {
   return (
     <Layout>
-        <h1>hola desde NotFound</h1>
+    <div>
+      <h1>Página no encontrada</h1>
+      <p>Lo sentimos, la página que estás buscando no existe.</p>
+      <Link to="/">Volver a inicio</Link>
+    </div>
       
     </Layout>
   )
