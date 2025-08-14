@@ -23,7 +23,7 @@ const handleSubmit = (e) => {
         email,
         password
       }
-      
+      console.log(newUser)
       
       
       
