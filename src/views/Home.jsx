@@ -4,7 +4,7 @@ import "../style/products.css"
 
 const Home = () => {
 const [products,setProducts]=useState([])
-
+const [user, setUser]=useState(true)
   const fetchingProducts = async () => {
 
     {/*response va a guardar lo que retorna el fetch */}
@@ -21,7 +21,18 @@ const [products,setProducts]=useState([])
    fetchingProducts()
  },[])
     
-    
+
+  const handleDelete = async (id) => {
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`, {method:"DELETE"})
+
+    if (response.ok) {
+      setProducts(prevProducts=>prevProducts.filter((product)=>product.id !=id))
+    }    
+ }
+  
+  
+  
+  
     return (
       <Layout>
     
@@ -50,7 +61,7 @@ const [products,setProducts]=useState([])
           </ul>
       
           {
-            products.map((product) => <div>
+            products.map((product) => <div key={product.id}>
               <h2 key={product.id}>{product.title}</h2>
               <img src={product.image} alt={product.title } />
               <p>{product.price}</p>
@@ -58,18 +69,16 @@ const [products,setProducts]=useState([])
               <p><strong>{ product.category}</strong></p>
             
               { 
-                true && <div>
+                user && <div>
 
               <button > Actualizar</button>
-              <button>Borrar</button>
+              <button onClick={()=>(handleDelete(product.id))}>Borrar</button>
             
                 </div> 
               }
             </div>)
           }
-          {
-            
-         }
+          
           
         </section>
 
@@ -80,4 +89,4 @@ const [products,setProducts]=useState([])
   )
 }
 
-export {Home}
+export { Home }
