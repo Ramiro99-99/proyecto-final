@@ -35,39 +35,22 @@ const [user, setUser]=useState(true)
   
     return (
       <Layout>
-    
-      
-        <h1>Título del Componente</h1>
-        <p>
-          Este es un ejemplo de componente estático en React sin colores
-          ni clases, solo estructura HTML.
-        </p>
-      
+  
+<section className="card-container">
+            {
+              
+            products.map((product) => <div key={product.id} 
+            >
+              <section className="card">
 
-      <section>
-        <h2>Sección 1</h2>
-        <p>
-          Aquí va un párrafo descriptivo de la sección uno. Todo el contenido es
-          fijo y no depende de props ni datos dinámicos.
-        </p>
-      </section>
-
-      <section>
-        <h2>Sección 2</h2>
-        <ul>
-          <li>Elemento de lista uno</li>
-          <li>Elemento de lista dos</li>
-          <li>Elemento de lista tres</li>
-          </ul>
-      
-          {
-            products.map((product) => <div key={product.id}>
+              <img src={product.image} alt={product.title} />
+             
+                <div className="cart-content">
               <h2 key={product.id}>{product.title}</h2>
-              <img src={product.image} alt={product.title } />
-              <p>{product.price}</p>
-              <p>{ product.description}</p>
+              <p className="price">${product.price}</p>
+              <p className="card-description">{ product.description}</p>
               <p><strong>{ product.category}</strong></p>
-            
+               
               { 
                 user && <div>
 
@@ -75,14 +58,18 @@ const [user, setUser]=useState(true)
               <button onClick={()=>(handleDelete(product.id))}>Borrar</button>
             
                 </div> 
-              }
+              
+            }
+            </div>
+              </section>
+              
             </div>)
+               
           }
           
-          
-        </section>
+        
 
-  
+  </section>
 
       
     </Layout>

@@ -15,6 +15,14 @@ const Dashboard = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
+    const newProduct = {
+      id:crypto.randomUUID(),
+      nombre: nombre,
+      precio: precio,
+      descripcion:descripcion
+        
+}
+ 
         setError("")
         setSucces("")
     
@@ -28,8 +36,7 @@ const Dashboard = () => {
     
     
     
-    setSucces("Su producto fue registrado")
-    
+    setSucces("Su producto fue registrado")    
     setNombre("")
     setPrecio("")
     setDescripcion("")

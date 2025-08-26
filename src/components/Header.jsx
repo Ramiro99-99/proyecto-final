@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import "../style/home.css"
 
 
 {/*alt para escribir en varias lineas a la vez */}
@@ -7,35 +8,66 @@ const Header = () => {
   const [user, setUser] = useState(true)
  
   return (
+    
+      
+<>
     <header>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOfQZ-LhkRa40zhwlae_IEqaqM1iFR21HAw&s" alt="" />
-      <nav>
-        <ul>
-          
-         
-          
-        </ul>
+      {user &&(
+  
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <Link to="/" className="navbar-brand">Inicio</Link>
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="Dashboard">Dashboard</Link></li>
+              </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit" placeholder="Busque el producto que quiera">Enviar</button>
+          </form>
+            </div>
+          </div>
+              </nav>
+    
+    
+        )}
 
-        { 
-          user && <>
-           <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/Dashboard">Dashboard</Link></li>
-          <button>Cerrar Sesión</button>
+        {!user &&(
+        <>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <Link to="Login" className="navbar-brand">Login</Link>
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="Register">Registrese</Link></li>
+              </ul>
+        
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit"  placeholder="Busque el producto que quiera">Enviar</button>
+      </form>
+            </div>
+          </div>
+        </nav>
+
+      
+            
+
           </>
-        }
+        )}
 
-        {
-          !user && <>
-           <li><Link to="/Login">Login</Link></li>
-          <li><Link to="/Register">Register</Link></li>
-          
-          </>
-        }
-
-      </nav>
-    </header>
-  )
-
+    
+    </header >    
+  </>  
+)
 }
 
-export {Header}
+      export {Header}
