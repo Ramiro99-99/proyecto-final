@@ -1,0 +1,20 @@
+
+header {
+   
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+}
+
+.nav{
+  background-color: black ;
+  
+}
+
+.navbar-brand{
+    color:firebrick;
+}
+.nav-link-active{
+  color:firebrick;
+  text-decoration: none; 
+}

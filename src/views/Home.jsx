@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Layout } from "../components/Layout"
 import "../style/products.css"
+import "../style/home.css"
+
 
 const Home = () => {
 const [products,setProducts]=useState([])
@@ -34,11 +36,18 @@ const [user, setUser]=useState(true)
   
   
     return (
+
+
       <Layout>
-  
+        
+        
+
+
+  {/*  */}
 <section className="card-container">
             {
               
+            
             products.map((product) => <div key={product.id} 
             >
               <section className="card">
@@ -71,8 +80,8 @@ const [user, setUser]=useState(true)
 
   </section>
 
-      
-    </Layout>
+      </Layout>
+    
   )
 }
 

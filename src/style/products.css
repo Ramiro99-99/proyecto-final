@@ -21,7 +21,7 @@ padding: 10px;
 
 .card{
   width: 200px;
-  height: 430px;
+  height: 500px;
   background-color:rgba(245, 245, 245, 0.455) ;
   overflow: hidden;
   margin: 20px;
@@ -52,16 +52,19 @@ padding: 10px;
   
 
 .card-description {
-  display: none;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
 
 
 .cart-content button{
-  background-color: beige;
+  background-color: rgba(255, 0, 0, 0.445);
   border-radius: 5px;
-  
+  padding: 5px;
+  margin-left: 10px;
 } 
 
 
