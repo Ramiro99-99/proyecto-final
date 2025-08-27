@@ -1,13 +1,14 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
-
+import "../style/dashboard.css"
 
 
 const Dashboard = () => {
 
   const [nombre, setNombre] = useState("")
   const[precio,setPrecio]=useState("")
-  const[descripcion,setDescripcion]=useState("")
+  const [descripcion, setDescripcion] = useState("")
+  const[imagen,setImagen]=useState("")
   const [error, setError] = useState("")
   const[succes,setSucces]=useState("")
 
@@ -19,7 +20,8 @@ const Dashboard = () => {
       id:crypto.randomUUID(),
       nombre: nombre,
       precio: precio,
-      descripcion:descripcion
+      descripcion: descripcion,
+      imagen:imagen
         
 }
  
@@ -29,8 +31,8 @@ const Dashboard = () => {
     
     
     
-    if (!nombre || !precio || !descripcion) {
-      setError("Debe colocar obligatoriamente los tres valores")
+    if (!nombre || !precio || !descripcion ||!imagen) {
+      setError("Debe colocar obligatoriamente los cuatro valores")
       return
     }
     
@@ -60,12 +62,14 @@ const Dashboard = () => {
   
   return (
     <Layout>
-      <h1>Panel de Control</h1>
-      <section>
-        <h2>Agregar nuevo producto</h2>
+     
+      <section  className="dashboard">
+        <div >
         <form onSubmit={handleSubmit}>
+        <section className="card-dashboard">
+            <h1>Agregar nuevo producto</h1>
           <div>
-            <label>Nombre:</label>
+            <label className="producto-nombre">Nombre:</label>
             <input type="text" placeholder="Ingrese el nombre del producto" onChange={handleNombre} value={nombre} />
           </div>
 
@@ -76,9 +80,13 @@ const Dashboard = () => {
 
           <div>
             <label>Descripción:</label>
-            <textarea placeholder="Ingrese una breve descripción" onChange={handleDescripcion} value={descripcion}></textarea>
+            <input placeholder="Ingrese una breve descripción" onChange={handleDescripcion} value={descripcion}></input>
           </div>
 
+              <div>
+                <label>Imagen:</label>
+                <input type="url" placeholder="coloque una imagen" />
+          </div>
 
           <button type="submit">Guardar producto</button>
 
@@ -87,9 +95,10 @@ const Dashboard = () => {
           }
           {
             succes && <p style={{color:"slategrey"}}>{ succes}</p>
-          }
-
+              }
+              </section>
         </form>
+        </div>
       </section>
     </Layout>
   )
