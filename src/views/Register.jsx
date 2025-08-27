@@ -1,6 +1,6 @@
 import { Layout } from "../components/Layout"
 import { useState } from "react"
-
+import "../style/register.css"
 
 const Register = () => {
   const [username,setUsername]=useState("")
@@ -48,12 +48,11 @@ const Register = () => {
 
   return (
     <Layout>
-            <h1>Registrese </h1>
 
-      <section>
+      <section className="register">
         <h2>Bienvenido al Register </h2>
         <form onSubmit={handleSubmit}>
-         
+         <section className="card-register">
           <div>
             <label>Nombre:</label>
             <input type="text" placeholder="Ingrese su nombre" onChange={(e)=>(handleUsername(e))} value={username}/>
@@ -81,9 +80,9 @@ const Register = () => {
             succes && <p style={{ color: "green" }}>{succes }</p>
           }
           <button>Enviar</button>
-
-        </form>
           </section>
+      </form>
+     </section>
     
     </Layout>
   )
