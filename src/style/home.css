@@ -6,9 +6,31 @@
 .busqueda{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+
 }
+.busqueda p{
+  margin-top: 15px;
+  margin-right: 10px;
+  color: whitesmoke;
+}
+
+.busqueda button{
+  border-radius: 15px;
+  padding:5px;
+  margin-left:20px ;
+  
+}
+
 .buscar{
-  background-color: aqua;
+  width: 65%;
+  border: 20px;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  border-radius: 10px;
 }
 

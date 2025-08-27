@@ -11,7 +11,10 @@ const Header = () => {
     
       
 <>
-    <header>
+      <header>
+        
+       
+
       {user &&(
   
         <nav className="navbar navbar-expand-lg nav">
@@ -20,7 +23,7 @@ const Header = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <Link to="/" className="navbar-brand">Inicio</Link>
+                <Link to="/" className="nav-link-active">Inicio</Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link-active" aria-current="page" to="Dashboard">Dashboard</Link></li>

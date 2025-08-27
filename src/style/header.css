@@ -1,4 +1,6 @@
 
+
+
 header {
    
   z-index: 2;
@@ -6,15 +8,15 @@ header {
   width: 100%;
 }
 
+
+
 .nav{
   background-color: black ;
   
 }
 
-.navbar-brand{
-    color:firebrick;
-}
 .nav-link-active{
   color:firebrick;
   text-decoration: none; 
+  margin-right: 10px;
 }

@@ -39,12 +39,16 @@ const [user, setUser]=useState(true)
 
 
       <Layout>
-        
-        
 
 
-  {/*  */}
 <section className="card-container">
+  
+        
+         <form className="busqueda">
+           <p>Buscar:</p>
+            <input type="text" placeholder="Busque el producto que desee aqui " className="buscar" />
+            <button >Buscar</button>
+      </form>
             {
               
             
