@@ -32,7 +32,7 @@ const Dashboard = () => {
     
     
     if (!nombre || !precio || !descripcion ||!imagen) {
-      setError("Debe colocar obligatoriamente los cuatro valores")
+      setError("Debe colocar todos los valores")
       return
     }
     
@@ -91,7 +91,7 @@ const Dashboard = () => {
           <button type="submit">Guardar producto</button>
 
           {
-            error && <p style={{color:"red"}}>{error }</p>
+            error && <p className="parrafoError">{error }</p>
           }
           {
             succes && <p style={{color:"slategrey"}}>{ succes}</p>

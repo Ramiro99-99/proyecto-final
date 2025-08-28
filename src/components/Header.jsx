@@ -5,12 +5,8 @@ import "../style/header.css"
 
 {/*alt para escribir en varias lineas a la vez */}
 const Header = () => {
-  const [user, setUser] = useState(false)
+  const [user, setUser] = useState(true)
  
-  const handleName = () => {
-    setUser = ramita
-    
-  }
 
 
   return (
