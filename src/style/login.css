@@ -2,9 +2,7 @@ body{
   background-color: aliceblue;
 }
 
-.nav{
-  background-color: aliceblue;
-}
+
 
 
 .container-card{
@@ -36,14 +34,14 @@ body{
   margin: auto;
 }
 
-.card h1{
+.card-login h1{
   color: rgba(245, 245, 245, 0.808) ;
 }
 
-.card label{
+.card-login label{
   
   width: 100%;
-  color: rgba(245, 245, 245, 0.808);  
+  color: rgb(245, 245, 245);  
   box-sizing: border-box;
 }
 
@@ -59,12 +57,13 @@ body{
   padding: 5px;
   border-radius: 10px;
   border: none;
-
+   background: steelblue;
   font-size: 1rem;
   cursor: pointer;
 }
 .card-login button:hover{
-  background: rgba(45, 45, 239, 0.679);
+  background-color: rgb(48, 138, 211);
+  
 
 }
 

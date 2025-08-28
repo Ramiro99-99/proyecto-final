@@ -50,9 +50,9 @@ const Register = () => {
     <Layout>
 
       <section className="register">
-        <h2>Bienvenido al Register </h2>
         <form onSubmit={handleSubmit}>
          <section className="card-register">
+        <h2>Si tiene cuenta registrese aqui</h2>
           <div>
             <label>Nombre:</label>
             <input type="text" placeholder="Ingrese su nombre" onChange={(e)=>(handleUsername(e))} value={username}/>
