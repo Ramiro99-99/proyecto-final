@@ -1,5 +1,8 @@
 import { Layout } from "../components/Layout"
 import { useState } from "react"
+import "../style/login.css"
+  
+
 
 const Login = () => {
 
@@ -48,11 +51,12 @@ const handleSubmit = (e) => {
   
   return (
     <Layout>
-      <h1>Inicia Sesión </h1>
+      
 
-      <section>
-        <h2>Bienvenido al Login </h2>
+      <section className="container-card">
         <form onSubmit={handleSubmit}>
+        <div  className="card">
+          <h1>Inicia Sesión </h1>
           <div>
             <label>Correo Electronico:</label>
             <input type="text" placeholder="Ingrese su correo electronico" onChange={handleEmail} value={email}/>
@@ -74,11 +78,11 @@ const handleSubmit = (e) => {
           {
             succes && <p style={{color:"yellowgreen"}}>{ succes}</p>
           }
+        </div>
         </form>
 
-        
-
       </section>
+
     </Layout>
   )
 }
