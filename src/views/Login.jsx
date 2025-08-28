@@ -55,7 +55,7 @@ const handleSubmit = (e) => {
 
       <section className="container-card">
         <form onSubmit={handleSubmit}>
-        <div  className="card">
+        <div  className="card-login">
           <h1>Inicia Sesión </h1>
           <div>
             <label>Correo Electronico:</label>
